@@ -11,6 +11,70 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+#video-section {
+  height: 100vh;
+  position: relative;
+}
+
+
+
+
+
+.parallax {
+  background-image: url('assets/img/parallax-background.jpg'); /* Reemplaza con tu imagen */
+  background-attachment: fixed; /* Clave para el efecto parallax */
+  background-size: cover; /* Asegura que la imagen ocupe todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  color: white; /* Texto claro para contraste */
+  position: relative;
+  padding: 60px 0; /* Ajusta el espacio vertical si lo necesitas */
+}
+
+
+@media (max-width: 768px) {
+  .parallax {
+      background-attachment: scroll; /* Desactiva el parallax en móviles */
+  }
+}
+
+
+
+#video-section {
+  padding: 50px 0;
+  background-color: #111; /* Color de fondo oscuro */
+}
+#video-section video {
+  max-width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  #video-section {
+      height: 60vh; /* Ajusta la altura en dispositivos más pequeños */
+  }
+  video {
+      object-fit: contain; /* Ajusta el video para que no se recorte en pantallas pequeñas */
+  }
+}
+
+
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
