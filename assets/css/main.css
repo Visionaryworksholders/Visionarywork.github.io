@@ -12,6 +12,65 @@
 --------------------------------------------------------------*/
 /* Fonts */
 
+
+
+
+.navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navmenu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre el texto y el icono */
+  transition: color 0.3s ease;
+}
+
+.navmenu a:hover,
+.navmenu a.active {
+  color: #00d8ff; /* Cambia a un color moderno en hover */
+}
+
+.mobile-nav-toggle {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* Oculto en pantallas grandes */
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+      display: block; /* Muestra el botón en pantallas pequeñas */
+  }
+
+  .navmenu ul {
+      flex-direction: column;
+      display: none; /* Oculto por defecto */
+      background: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      padding: 20px;
+  }
+
+  .navmenu ul.active {
+      display: flex; /* Muestra el menú cuando está activo */
+  }
+}
+
+
+
+
+
+
 .parallax {
   background-attachment: fixed;
   background-size: cover;
